@@ -7,8 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+  <header class="app-header">
+    <div class="logo">ParkIt Logo</div>
+    <div class="user">UserProfile</div>
+  </header>
+  <div class="content">
+    <%= yield %>
+  </div>
 </body>
 </html>
