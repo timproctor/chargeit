@@ -40,7 +40,9 @@ gem 'unicorn'
 gem 'pry'
 gem 'postgres-copy'
 gem "autoprefixer-rails"
-gem "digitalocean"
+gem "execjs"
+gem "therubyracer"
+gem "pg"
 
 group :development, :test do
   gem 'spring-commands-rspec'
