@@ -39,6 +39,7 @@ gem 'unicorn'
 # gem 'debugger', group: [:development, :test]
 gem 'pry'
 gem 'postgres-copy'
+gem "autoprefixer-rails"
 
 group :development, :test do
   gem 'spring-commands-rspec'

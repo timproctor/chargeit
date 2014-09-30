@@ -1,1 +1,13 @@
-<h1>Hi, people that want to park in Denver!</h1>
+<h1>We can help you ParkIt</h1>
+<div class="map-container">
+  <div id="address-search" class="searchbar">
+    <%= form_for "search" do |f| %>
+      <%= f.label :address %>
+      <%= f.text_field :address, placeholder: "Where do you want to park?" %><br />
+      <%= f.submit %>
+    <% end %>
+  </div>
+  <div id="map">
+    map goes here
+  </div>
+</div>
