@@ -43,6 +43,7 @@ gem "autoprefixer-rails"
 gem "execjs"
 gem "therubyracer"
 gem "pg"
+gem "skeleton-rails"
 
 group :development, :test do
   gem 'spring-commands-rspec'
