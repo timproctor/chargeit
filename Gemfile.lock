@@ -31,6 +31,9 @@ GEM
     autoprefixer-rails (3.1.0.20140911)
       execjs
     bcrypt (3.1.7)
+    bourbon (3.2.3)
+      sass (~> 3.2)
+      thor
     builder (3.2.2)
     capybara (2.4.3)
       mime-types (>= 1.16)
@@ -180,6 +183,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   bcrypt (~> 3.1.7)
+  bourbon
   capybara
   coffee-rails (~> 4.0.0)
   execjs
