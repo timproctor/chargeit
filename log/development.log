@@ -1,0 +1,741 @@
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 10:54:37 -0600
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.1.4) lib/active_record/migration.rb:389:in `check_pending!'
+  activerecord (4.1.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lint.rb:49:in `_call'
+  rack (1.5.2) lib/rack/lint.rb:37:in `call'
+  rack (1.5.2) lib/rack/showexceptions.rb:24:in `call'
+  rack (1.5.2) lib/rack/commonlogger.rb:33:in `call'
+  rack (1.5.2) lib/rack/chunked.rb:43:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:576:in `process_client'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:670:in `worker_loop'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:525:in `spawn_missing_workers'
+  unicorn (4.8.3) lib/unicorn/http_server.rb:140:in `start'
+  unicorn (4.8.3) bin/unicorn:126:in `<top (required)>'
+  /Users/timproctor/.rvm/gems/ruby-2.1.2/bin/unicorn:23:in `load'
+  /Users/timproctor/.rvm/gems/ruby-2.1.2/bin/unicorn:23:in `<main>'
+  /Users/timproctor/.rvm/gems/ruby-2.1.2/bin/ruby_executable_hooks:15:in `eval'
+  /Users/timproctor/.rvm/gems/ruby-2.1.2/bin/ruby_executable_hooks:15:in `<main>'
+
+
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.6ms)
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreateParkinglots (20140930155122)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  CREATE TABLE "parkinglots" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) 
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140930155122"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 10:55:07 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ParkinglotsController#index as HTML
+  Rendered parkinglots/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 591ms (Views: 581.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/parkinglots.css?body=1" for 127.0.0.1 at 2014-09-30 10:55:08 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 10:55:08 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 10:55:08 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 10:55:08 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 10:55:08 -0600
+
+
+Started GET "/assets/parkinglots.js?body=1" for 127.0.0.1 at 2014-09-30 10:55:08 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 10:55:08 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 11:06:15 -0600
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by ParkinglotsController#index as HTML
+  Rendered parkinglots/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 53ms (Views: 51.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/parkinglots.css?body=1" for 127.0.0.1 at 2014-09-30 11:06:15 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 11:06:15 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 11:06:15 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 11:06:15 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 11:06:15 -0600
+
+
+Started GET "/assets/parkinglots.js?body=1" for 127.0.0.1 at 2014-09-30 11:06:15 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 11:06:15 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 11:12:32 -0600
+Processing by ParkinglotsController#index as HTML
+  Rendered parkinglots/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 45ms (Views: 44.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/parkinglots.css?body=1" for 127.0.0.1 at 2014-09-30 11:12:32 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 11:12:32 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 11:12:32 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 11:12:32 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 11:12:32 -0600
+
+
+Started GET "/assets/parkinglots.js?body=1" for 127.0.0.1 at 2014-09-30 11:12:32 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 11:12:32 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 11:44:38 -0600
+Processing by ParkinglotsController#index as HTML
+  Rendered parkinglots/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 45ms (Views: 44.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/parkinglots.css?body=1" for 127.0.0.1 at 2014-09-30 11:44:38 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 11:44:38 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 11:44:38 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 11:44:38 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 11:44:38 -0600
+
+
+Started GET "/assets/parkinglots.js?body=1" for 127.0.0.1 at 2014-09-30 11:44:38 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 11:44:38 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 12:03:58 -0600
+Processing by ParkinglotsController#index as HTML
+  Rendered parkinglots/index.html.erb within layouts/application (1.9ms)
+Completed 500 Internal Server Error in 4ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1..2)):
+    1: <h1>We can help you ParkIt</h1>
+    2:   <div id="address-search" class="searchbar">
+    3:     <%= form_for  do |f| %>
+    4:       <%= f.label  %>:
+    5:       <%= f.text_field  %><br />
+    6:       <%= f.submit %>
+  app/views/parkinglots/index.html.erb:3:in `_app_views_parkinglots_index_html_erb___1131937985450328149_2196278660'
+
+
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (13.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 12:04:10 -0600
+Processing by ParkinglotsController#index as HTML
+  Rendered parkinglots/index.html.erb within layouts/application (1.3ms)
+Completed 500 Internal Server Error in 3ms
+
+ActionView::Template::Error (wrong number of arguments (0 for 1..3)):
+    1: <h1>We can help you ParkIt</h1>
+    2:   <div id="address-search" class="searchbar">
+    3:     <%= form_for "search" do |f| %>
+    4:       <%= f.label  %>:
+    5:       <%= f.text_field  %><br />
+    6:       <%= f.submit %>
+    7:     <% end %>
+  app/views/parkinglots/index.html.erb:4:in `block in _app_views_parkinglots_index_html_erb___1131937985450328149_2195702060'
+  app/views/parkinglots/index.html.erb:3:in `_app_views_parkinglots_index_html_erb___1131937985450328149_2195702060'
+
+
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (12.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 12:05:03 -0600
+Processing by ParkinglotsController#index as HTML
+  Rendered parkinglots/index.html.erb within layouts/application (24.4ms)
+Completed 200 OK in 66ms (Views: 65.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/parkinglots.css?body=1" for 127.0.0.1 at 2014-09-30 12:05:03 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 12:05:03 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 12:05:03 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 12:05:03 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 12:05:03 -0600
+
+
+Started GET "/assets/parkinglots.js?body=1" for 127.0.0.1 at 2014-09-30 12:05:03 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 12:05:03 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 12:05:25 -0600
+Processing by ParkinglotsController#index as HTML
+  Rendered parkinglots/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 61ms (Views: 60.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/parkinglots.css?body=1" for 127.0.0.1 at 2014-09-30 12:05:25 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 12:05:25 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 12:05:25 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 12:05:25 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 12:05:25 -0600
+
+
+Started GET "/assets/parkinglots.js?body=1" for 127.0.0.1 at 2014-09-30 12:05:25 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 12:05:25 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 12:05:57 -0600
+Processing by ParkinglotsController#index as HTML
+  Rendered parkinglots/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 47ms (Views: 46.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/parkinglots.css?body=1" for 127.0.0.1 at 2014-09-30 12:05:57 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 12:05:57 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 12:05:57 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 12:05:57 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 12:05:57 -0600
+
+
+Started GET "/assets/parkinglots.js?body=1" for 127.0.0.1 at 2014-09-30 12:05:57 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 12:05:57 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 12:08:06 -0600
+Processing by ParkinglotsController#index as HTML
+  Rendered parkinglots/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 55ms (Views: 53.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/parkinglots.css?body=1" for 127.0.0.1 at 2014-09-30 12:08:06 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 12:08:06 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 12:08:06 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 12:08:06 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 12:08:06 -0600
+
+
+Started GET "/assets/parkinglots.js?body=1" for 127.0.0.1 at 2014-09-30 12:08:06 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 12:08:06 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 12:15:42 -0600
+Processing by ParkinglotsController#index as HTML
+  Rendered parkinglots/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 63ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/parkinglots.css?body=1" for 127.0.0.1 at 2014-09-30 12:15:42 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 12:15:42 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 12:15:42 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 12:15:42 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 12:15:42 -0600
+
+
+Started GET "/assets/parkinglots.js?body=1" for 127.0.0.1 at 2014-09-30 12:15:42 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 12:15:42 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 12:19:26 -0600
+Processing by ParkinglotsController#index as HTML
+  Rendered parkinglots/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 48ms (Views: 47.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/parkinglots.css?body=1" for 127.0.0.1 at 2014-09-30 12:19:26 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 12:19:26 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 12:19:26 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 12:19:26 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 12:19:26 -0600
+
+
+Started GET "/assets/parkinglots.js?body=1" for 127.0.0.1 at 2014-09-30 12:19:26 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 12:19:26 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 12:23:07 -0600
+Processing by ParkinglotsController#index as HTML
+  Rendered parkinglots/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 45ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/parkinglots.css?body=1" for 127.0.0.1 at 2014-09-30 12:23:07 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 12:23:07 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 12:23:07 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 12:23:07 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 12:23:07 -0600
+
+
+Started GET "/assets/parkinglots.js?body=1" for 127.0.0.1 at 2014-09-30 12:23:07 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 12:23:07 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 12:28:39 -0600
+Processing by ParkinglotsController#index as HTML
+  Rendered parkinglots/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 65ms (Views: 63.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 12:28:39 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 12:28:40 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 12:28:40 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 12:28:40 -0600
+
+
+Started GET "/assets/parkinglots.js?body=1" for 127.0.0.1 at 2014-09-30 12:28:40 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 12:28:40 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 12:48:12 -0600
+Processing by ParkinglotsController#index as HTML
+  Rendered parkinglots/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 47ms (Views: 46.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 12:48:12 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 12:48:12 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 12:48:12 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 12:48:12 -0600
+
+
+Started GET "/assets/parkinglots.js?body=1" for 127.0.0.1 at 2014-09-30 12:48:12 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 12:48:12 -0600
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 13:51:15 -0600
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 17:25:09 -0600
+
+ActiveRecord::NoDatabaseError (FATAL:  role "deployment" does not exist
+Run `$ bin/rake db:create db:migrate` to create your database):
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:898:in `rescue in connect'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.4) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.4) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.4) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 17:30:50 -0600
+
+ActiveRecord::NoDatabaseError (FATAL:  role "deploy" does not exist
+Run `$ bin/rake db:create db:migrate` to create your database):
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:898:in `rescue in connect'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.4) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.4) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.4) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 17:31:11 -0600
+
+ActiveRecord::NoDatabaseError (FATAL:  role "deploy" does not exist
+Run `$ bin/rake db:create db:migrate` to create your database):
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:898:in `rescue in connect'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.4) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.4) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.4) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (16.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 17:31:25 -0600
+
+ActiveRecord::NoDatabaseError (FATAL:  database "parkit_development" does not exist
+Run `$ bin/rake db:create db:migrate` to create your database):
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:898:in `rescue in connect'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:888:in `connect'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.4) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.4) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.4) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.4) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.4) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.4) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.4) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.4) lib/rails/engine.rb:514:in `call'
+  railties (4.1.4) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/timproctor/.rvm/rubies/ruby-2.1.2/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.1ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/timproctor/.rvm/gems/ruby-2.1.2/gems/actionpack-4.1.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (34.9ms)
+  [1m[36m (8.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (12.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateParkinglots (20140930155122)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (20.1ms)[0m  [1mCREATE TABLE "parkinglots" ("id" serial primary key, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (5.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140930155122"]]
+  [1m[36m (5.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-09-30 17:34:36 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ParkinglotsController#index as HTML
+  Rendered parkinglots/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 128ms (Views: 111.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-30 17:34:36 -0600
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-30 17:34:36 -0600
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-30 17:34:36 -0600
+
+
+Started GET "/assets/parkinglots.js?body=1" for 127.0.0.1 at 2014-09-30 17:34:36 -0600
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-30 17:34:36 -0600
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-30 17:34:36 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (6.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.4ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (2.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateParkinglots (20140930155122)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "parkinglots" ("id" serial primary key, "PARKING_ID" character varying(255), "RECORD_DATE" character varying(255), "RECORD_STATUS" character varying(255), "PARKING_STATUS" character varying(255), "FROM_DATE" character varying(255), "TO_DATE" character varying(255), "CITY_OWNED" character varying(255), "DDP_BLOCKNUM" character varying(255), "SUBMARKET" character varying(255), "NUMBER_OF_SPACES" character varying(255), "LOT_OPERATOR" character varying(255), "ENTER_OFF_STREETS" character varying(255), "MONTHLY_RATE" character varying(255), "DAILY_RATE" character varying(255), "BIZ_FILE_NUM" character varying(255), "PARKING_TYPE" character varying(255), "GLOBALID" character varying(255), "SHAPE_Length" character varying(255), "SHAPE_Area" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (6.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140930155122"]]
+  [1m[36m (12.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
