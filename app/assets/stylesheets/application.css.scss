@@ -1,6 +1,7 @@
-@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
-@import "grid_settings";
-@import "../bower_components/neat/app/assets/stylesheets/neat";
+@import "bourbon";
+@import "base/grid-settings";
+@import "neat";
+@import "base/base";
 
 // Variables and Mixins
 @import "globals";
@@ -16,7 +17,7 @@
 // Base Styles
 @import "base/reset";
 @import "base/structure";
-@import "base/base";
+@import "neat";
 @import "base/type";
 @import "base/buttons";
 @import "base/lists";
