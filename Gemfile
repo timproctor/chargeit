@@ -44,6 +44,7 @@ gem "execjs"
 gem "therubyracer"
 gem "pg"
 gem "skeleton-rails"
+gem 'bourbon'
 
 group :development, :test do
   gem 'spring-commands-rspec'
