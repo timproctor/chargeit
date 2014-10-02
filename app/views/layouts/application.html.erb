@@ -7,18 +7,20 @@ wf-europa-n7-active wf-active">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="parking lot info for Denver" />
   <title>ParkIt</title>
-  <link rel="stylesheet" href="stylesheets/screen.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 
-  <link rel="stylesheet" href="css/application.css" type="text/css" media="all" />
-
-  <script type="text/javascript" src="bower_components/modernizr/modernizr.js"></script>
 </head>
-<body>
-  <header class="nav">
-    <div class="logo">ParkIt Logo</div>
-    <div class="driver">DriverProfile</div>
-  </header>
+<body class="index">
+  <nav class="bourbon">
+    <ul>
+      <li><div class="logo">ParkIt Logo</div></li>
+      <li><div class="driver">Driver Profile and Log-in</div></li>
+    </ul>
+  </nav>
   <div class="content">
+    <%= render 'shared/navbar' %>
     <%= yield %>
   </div>
   <footer class="page_footer">
