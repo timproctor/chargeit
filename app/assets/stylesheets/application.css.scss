@@ -1,46 +1,4 @@
 @import "bourbon";
-@import "base/grid-settings";
-@import "neat";
 @import "base/base";
-
-// Variables and Mixins
-@import "globals";
-@import "helpers";
-
-@import "mixins/font_size";
-@import "mixins/border_radius";
-@import "mixins/gradients";
-@import "mixins/rotate";
-@import "mixins/responsive";
-
-
-// Base Styles
-@import "base/reset";
-@import "base/structure";
 @import "neat";
-@import "base/type";
-@import "base/buttons";
-@import "base/lists";
-@import "base/blank_states";
-@import "base/error_pages";
-@import "base/misc";
-@import "base/forms/forms";
-
-
-// Components
-@import "modules/charts";
-@import "modules/icons";
-@import "modules/labels_badges";
-@import "modules/links";
-@import "modules/loading";
-@import "modules/media";
-@import "modules/messages";
-@import "modules/modal";
-@import "modules/nav";
-@import "modules/pagination";
-@import "modules/tooltip";
-@import "modules/wells";
-
-
-// IE Fixes
-@import "base/ie";
+@import "custom_components/navbar";

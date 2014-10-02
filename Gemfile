@@ -43,7 +43,6 @@ gem "autoprefixer-rails"
 gem "execjs"
 gem "therubyracer"
 gem "pg"
-gem "skeleton-rails"
 gem 'bourbon'
 gem 'neat'
 
