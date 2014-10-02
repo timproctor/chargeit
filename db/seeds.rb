@@ -1,4 +1,7 @@
 
+CSV.parse("/db/data/parking_lots.csv", {headers: true, header_converters: :symbol}) do |row|
+  Parkinglot.create(row)
+end
 
 #1 add migrations for Parkinglot data
 #2 run migrations

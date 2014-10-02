@@ -45,7 +45,7 @@ gem "therubyracer"
 gem "pg"
 gem 'bourbon'
 gem 'neat'
-gem 'fastercsv'
+
 
 group :development, :test do
   gem 'spring-commands-rspec'
