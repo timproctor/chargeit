@@ -1,6 +1,6 @@
-CSV.parse(Rails.root.join('db','data','parking_lots.csv'), headers: true).each do |row|
-  #row["PARKING_LOT_ID"]
-  Parkinglot.create(row) #might be more complicated, but basically, parse the data into models
+
+CSV.parse("/db/data/parking_lots.csv", {headers: true, header_converters: :symbol}) do |row|
+  Parkinglot.create(row)
 end
 
 #1 add migrations for Parkinglot data

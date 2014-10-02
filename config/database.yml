@@ -1,25 +1,17 @@
-development:
-  adapter: postgresql
+default: &default
+  adapter:  postgresql
   encoding: unicode
-  database: parkit_development
-  host: localhost
-  pool: 5
-  
+  pool:     5
+  timeout:  5000
+
+development:
+  <<: *default
+  database: parkit_dev
 
 test:
-  adapter: postgresql
-  encoding: unicode
+  <<: *default
   database: parkit_test
-  host: localhost
-  pool: 5
-  username: deploy
-  password: password1
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  database: parkit
-  host: localhost
-  pool: 5
-  username: deploy
-  password: password1
+  <<: *default
+  url: <%= ENV['DATABASE_URL'] %>
