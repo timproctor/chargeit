@@ -1,13 +1,11 @@
-<h1>We can help you ParkIt</h1>
-<div class="map-container">
-  <div id="address-search" class="searchbar">
-    <%= form_for "search" do |f| %>
-      <%= f.label :address %>
-      <%= f.text_field :address, placeholder: "Where do you want to park?" %><br />
-      <%= f.submit %>
-    <% end %>
+<h2>Where is the nearest parking lot? We'll help you ParkIt!</h2>
+<div class="outer-container">
+  <div class="refills-wrapper">
+    <%= render "search" %>
   </div>
-  <div id="map">
-    map goes here
+  <div id="map-container">
+    <a href="javascript:void(0)" class="retina-image">
+      <img src="assets/images/static.png" alt="static-map">
+    </a>
   </div>
 </div>
