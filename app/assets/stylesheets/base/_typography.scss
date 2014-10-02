@@ -1,7 +1,7 @@
 body {
   -webkit-font-smoothing: antialiased;
   background-color: $base-background-color;
-  color: $base-font-color;
+  color: $blackish;
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
@@ -26,7 +26,7 @@ h1 {
 h2 {
   font-size: $h2-font-size;
   text-align: -webkit-center;
-  padding: 2em;
+  padding: 1em;
 }
 
 h3 {
