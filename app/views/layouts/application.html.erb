@@ -1,30 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" class="wf-europa-i4-active wf-europa-i7-active wf-europa-n4-active
 wf-europa-n7-active wf-active">
-<head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="parking lot info for Denver" />
-  <title>ParkIt</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-
-</head>
-<body class="index">
-  <nav class="bourbon">
-    <ul>
-      <li><div class="logo">ParkIt Logo</div></li>
-      <li><div class="driver">Driver Profile and Log-in</div></li>
-    </ul>
-  </nav>
-  <div class="content">
-    <%= render 'shared/navbar' %>
-    <%= yield %>
-  </div>
-  <footer class="page_footer">
-    https://github.com/timproctor/parkit
-  </footer>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="parking lot info for Denver" />
+    <title>ParkIt</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body class="index">
+    <div class="navbar">
+      <%= render 'shared/navbar' %>
+    </div>
+      <%= yield %>
+  </body>
 </html>
