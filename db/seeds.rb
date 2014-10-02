@@ -1,6 +1,9 @@
+require 'csv'
 
-CSV.parse("/db/data/parking_lots.csv", {headers: true, header_converters: :symbol}) do |row|
-  Parkinglot.create(row)
+contents = CSV.open("db/data/parking_lots.csv", headers: :true)
+contents.each do |row|
+  cleaned_row = Hash[row.map{ |k, v| [k.downcase, v] }]
+  ParkingLot.create!(cleaned_row)
 end
 
 #1 add migrations for Parkinglot data
