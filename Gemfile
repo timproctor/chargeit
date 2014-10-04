@@ -42,15 +42,16 @@ gem 'postgres-copy'
 gem "autoprefixer-rails"
 gem "execjs"
 gem "therubyracer"
-gem "pg"
 gem 'bourbon'
 gem 'neat'
 gem 'geocoder'
+
 
 
 group :development, :test do
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
   gem 'capybara'
+  gem "pg"
   gem 'factory_girl_rails'
 end
