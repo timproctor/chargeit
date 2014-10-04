@@ -1,0 +1,7 @@
+<div class="search-tool">
+  <%= form_tag("/search", method: "get") do %>
+    <%= label_tag(:q, "Parking lots near which address?") %>
+    <%= text_field_tag(:q) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+</div>

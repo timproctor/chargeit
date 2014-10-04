@@ -1,0 +1,51 @@
+== README
+
+This is the beginning of a 3 week project to build a small app that integrates
+OpenColorado data and MapBox API. Denver drivers will be able to use the app
+to find the information on the closest parking structure. Even though this idea
+is small in scope, there are additions that could make the app like the Yelp of
+parking.
+
+Iteration Planning:
+
+by: 10/2 "Bare Bones"
+Needs:
+  some front end on root page, a listing of lots based on raw data,
+Nice to have:
+  sparkling front end on root page, integration with MapBox for geolocation of
+  drivers
+Oh Shit:
+  "App coming soon on localhost8080"
+
+by: 10/6 "budding"
+Needs:
+  sparkling front end on root page, geolocation for drivers, links to parkinglots
+Nice to have:
+  log-in functionality for drivers, ability for them to post comments and their
+  own lots
+Oh Shit:
+  root page lists available parking on map
+
+by: 10/9 "almost there"
+Needs:
+  sparlkling front end on root page and anypage, geolocation for drivers,
+  ability to type in an address, set distance radius, and find lots with-in that
+  radius, ability to log-in and comment on parking or other driver comments,
+Nice to have:
+  game-ify with merits and badges for making comments or creating parking
+Oh Shit:
+  parkinglot info within a set parameter of an entered address
+
+by: 10/13 "done"
+Needs:
+  sparlkling front end on root page and anypage, geolocation for drivers,
+  ability to type in an address, set distance radius, and find lots with-in that
+  radius, ability to log-in and comment on parking or other driver comments,
+  game-ify with merits and badges for making comments or creating parking
+Nice to have:
+  better error message handling, full test coverage, sparkling front and iron
+  clad back-end
+Oh shit:
+  parkinglot info within a set parameter of an entered address
+  some basic css
+  basic login

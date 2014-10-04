@@ -1,0 +1,13 @@
+<%# turn this into an actual form_for that submits with an action to /parking_lots (index) %>
+<h2>Where is the nearest charging station? We'll help you ChargeIt!</h2>
+<div class="container">
+  <div id="map-container">
+    <a href="javascript:void(0)" class="retina-image">
+      <iframe width='100%' height='500px' frameBorder='0'
+      src='https://a.tiles.mapbox.com/v4/timproctor.jlid9hm5/attribution,zoompan,zoomwheel,geocoder,share.html?access_token=pk.eyJ1IjoidGltcHJvY3RvciIsImEiOiJZOXNzekxjIn0.Ilb5Tb1Uo44qlOtFTA5NCw'></iframe>
+    </a>
+  </div>
+  <div id="search-tools" class="fieldset">
+    <%= render "search" %>
+  </div>
+</div>

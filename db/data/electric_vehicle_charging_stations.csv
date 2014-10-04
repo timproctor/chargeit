@@ -1,0 +1,19 @@
+FACILITY_NAME,ADDRESS_ID,ADDRESS_LINE1,ADDRESS_LINE2,CITY,STATE,ZIP,FACILITY_TYPE,QUANTITY,ACCESSIBILITY,CHARGER_TYPE,CHARGE_LEVEL,PRICE,CHARGER_TYPE_2,GLOBALID
+Tremont Street Garage,55349,400 15th St,,Denver,CO,80202,Public Garage,4,Public Use,,1 & 2,,,{00000000-0000-0000-0000-000000000000}
+Hyatt Regency Denver,55272,650 15th St,,Denver,CO,80202,Public Garage,4,Public Use,,1,,,{00000000-0000-0000-0000-000000000000}
+EOS,370940,1783 15th St,,Denver,CO,,Private Garage,18,Private Use,,2,,,{00000000-0000-0000-0000-000000000000}
+Denver Performing Arts Center Garage,166622,1055 13th St,,Denver,CO,80204,Public Garage,3,Public Use,ChargePoint,2 & 3,0,DC Fast Charger (1),{00000000-0000-0000-0000-000000000000}
+Denver Culutral Center Garage,172379,65 W 12th St,,Denver,CO,80204,Public Garage,3,Public Use,ChargePoint,2 & 3,0,DC Fast Charger (1),{00000000-0000-0000-0000-000000000000}
+Denver Museum of Nature & Science,222144,2001 N Colorado Blvd,,Denver,CO,80205,Public Garage,2,Public Use,"120V, 16A, NEMA 5-20R",1 & 2,0,"208/240V, 30A, J1772",{00000000-0000-0000-0000-000000000000}
+Wellington Webb Municipal Building,168091,201 W Colfax Ave,,Denver,CO,80202,Private Garage,1,Private Use,,,,,{00000000-0000-0000-0000-000000000000}
+Walgreens,64636,2000 E Colfax Ave,,Denver,CO,80206,Public Lot,1,Public Use,Sema,,0,,{00000000-0000-0000-0000-000000000000}
+Walgreens,225623,300 S Federal Blvd,,Denver,CO,80219,Public Lot,1,Public Use,Sema,,0,,{00000000-0000-0000-0000-000000000000}
+Walgreens,101295,1505 S Federal Blvd,,Denver,CO,80219,Public Lot,1,Public Use,Sema,,0,,{00000000-0000-0000-0000-000000000000}
+Walgreens,150460,7190 E Hampden Ave,,Denver,CO,80224,Public Lot,1,Public Use,Sema,,0,,{00000000-0000-0000-0000-000000000000}
+Crescent Electric Supply,78095,1780 W 6th Ave,,Denver,CO,80204,Private Lot,1,Private Use,ChargePoint,2,,"208/240V, 30A, J1772",{00000000-0000-0000-0000-000000000000}
+Denver Justice Center Garage,189272,490 W 14th Ave,,Denver,CO,80204,Public Garage,1,Public Use,ChargePoint,2,0,,{00000000-0000-0000-0000-000000000000}
+Bannock Street Parking Lot,67047,1345 N Bannock St,,Denver,CO,80204,Public Lot,1,Public Use,ChargePoint,2,0,,{00000000-0000-0000-0000-000000000000}
+Ross-Cherry Creek Branch Library,84797,305 N Milwaukee St,,Denver,CO,80206,Public Lot,1,Public Use,ChargePoint,2,0,,{00000000-0000-0000-0000-000000000000}
+Acme Parking Lot,367780,1430 14th St,,Denver,CO,80202,Public Lot,1,Public Use,ChargePoint,2,0,,{00000000-0000-0000-0000-000000000000}
+Firehouse Parking Lot,54204,1322 Blake St,,Denver,CO,80202,Public Lot,1,Public Use,ChargePoint,2,0,,{00000000-0000-0000-0000-000000000000}
+Colorado Convention Center,54218,700 14th St,,Denver,CO,80202,Public Garage,1,Public Use,ChargePoint,2,0,,{00000000-0000-0000-0000-000000000000}
