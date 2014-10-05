@@ -1,9 +1,9 @@
 require 'csv'
 
-contents = CSV.open("db/data/electric_vehicle_charging_stations.csv", headers: :true)
+
+contents = CSV.open("db/data/electric_vehicle_charging_stations.csv", headers: true)
 contents.each do |row|
   cleaned_row = Hash[row.map{ |k, v| [k.downcase, v] }]
-
   ChargingStation.create!(cleaned_row)
 end
 

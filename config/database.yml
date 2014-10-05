@@ -1,16 +1,12 @@
 default: &default
   adapter:  postgresql
   encoding: unicode
+  username: timproctor
   pool:     5
   timeout:  5000
 
 development:
   <<: *default
-  database: chargeit_dev
-
-test:
-  <<: *default
-  database: chargeit_test
 
 test:
   <<: *default

@@ -3,6 +3,6 @@ class ChargingStation < ActiveRecord::Base
   after_validation :geocode
 
   def full_address
-    "#{address_line1} #{address_line2}, #{city}, #{state} #{zip}"
+    "#{address_line1}, #{city}, #{state} #{zip}"
   end
 end

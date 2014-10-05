@@ -47,7 +47,6 @@ gem 'neat'
 gem 'geocoder'
 
 
-
 group :development, :test do
   gem 'spring-commands-rspec'
   gem 'rspec-rails'
