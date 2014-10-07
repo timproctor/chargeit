@@ -13,8 +13,6 @@ class ChargingStation < ActiveRecord::Migration
       t.string :charge_level
       t.string :price
       t.string :charger_type_2
-      t.float  :latitude
-      t.float  :longitude
       t.timestamps
     end
   end
