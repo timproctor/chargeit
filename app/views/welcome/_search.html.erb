@@ -1,7 +1,6 @@
 <div class="search-tool">
-  <%= form_tag("/search", method: "get") do %>
-    <%= label_tag(:q, "Parking lots near which address?") %>
-    <%= text_field_tag(:q) %>
+  <%= form_tag("/search", method: "post", class: "address-search-form") do %>
+    <%= text_field_tag(:q, nil, {id: 'address-search', placeholder: 'Charging stations near which address?'}) %>
     <%= submit_tag("Search") %>
   <% end %>
 </div>

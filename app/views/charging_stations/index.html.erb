@@ -1,0 +1,14 @@
+<%= content_tag(:h1, 'Charging Facilities Near You') %>
+<% @charging_stations.each do |station| %>
+  <div>
+    <hr />
+    <%= content_tag(:h3, station.facility_name) %>
+    <h4>Address:</h4>
+    <ul>
+      <%= content_tag(:li, station.address_line1) %>
+      <%= content_tag(:li, station.city) %>
+      <%= content_tag(:li, station.state) %>
+      <%= content_tag(:li, station.zip) %>
+    </ul>
+  </div>
+<% end %>

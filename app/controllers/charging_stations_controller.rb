@@ -1,4 +1,17 @@
 class ChargingStationsController < ApplicationController
+
+  def index
+    address = params[:q]
+    stations = ChargingStation.near(address)
+    @charging_stations = ChargingStationDecorator.decorate_collection(stations)
+  end
+
+  def map
+    address = params[:q]
+    stations = ChargingStation.near(address)
+    @charging_stations = ChargingStationDecorator.decorate_collection(stations)
+  end
+
   def create
     @charging_station = ChargingStation.create(charging_params)
   end
