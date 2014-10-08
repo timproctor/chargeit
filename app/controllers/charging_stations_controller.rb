@@ -2,7 +2,7 @@ class ChargingStationsController < ApplicationController
 
   def index
     address = params[:q]
-    stations = ChargingStation.near(address)
+    stations = ChargingStation.near(address, 5)
     @charging_stations = ChargingStationDecorator.decorate_collection(stations)
   end
 

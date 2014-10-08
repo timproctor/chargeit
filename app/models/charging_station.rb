@@ -1,8 +1,8 @@
 class ChargingStation < ActiveRecord::Base
-  reverse_geocoded_by :latitude, :longitude
+  geocoded_by :full_street_address
   after_validation :geocode
 
-  def embed_data
-    "#{address_line1}.gsub(" ","+"),#{city}.gsub(" ","+"),#{state}"
+  def full_street_address
+    "#{address_line1},#{city}, #{state} #{zip}"
   end
 end
