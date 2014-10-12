@@ -1,5 +1,6 @@
 class ChargingStationsController < ApplicationController
-
+  respond_to :json
+  
   def index
     address = params[:q]
     stations = ChargingStation.near(address, 5)
