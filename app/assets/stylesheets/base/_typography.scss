@@ -5,6 +5,7 @@ body {
   font-family: $base-font-family;
   font-size: $base-font-size;
   line-height: $base-line-height;
+  margin: 0;
 }
 
 h1,
@@ -21,12 +22,14 @@ h6 {
 
 h1 {
   font-size: $h1-font-size;
+  text-align: center;
+  padding-bottom: 10px;
 }
 
 h2 {
   font-size: $h2-font-size;
-  text-align: -webkit-center;
-  padding: 1em;
+  text-align: center;
+  padding-bottom: 1em;
 }
 
 h3 {

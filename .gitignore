@@ -8,3 +8,4 @@ rdoc
 test.db
 tmp
 log
+config/application.yml

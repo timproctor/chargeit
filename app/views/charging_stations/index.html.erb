@@ -1,15 +1,21 @@
+<div class="layout-fixed-width ">
 <%= content_tag(:h1, 'Charging Facilities Near You') %>
+  <% if !@charging_stations.present? %>
+    <h4>DERP. We didn't find any.</h4>
+  <% end %>
 
-<% @charging_stations.each do |station| %>
-  <div classs="listings">
-    <div class="facility_name">
-      <%= station.facility_name %>
+
+  <% @charging_stations.each do |station| %>
+    <div classs="listings">
+      <div class="facility_name">
+        <%= station.facility_name %>
+      </div>
+      <h4>Address:</h4>
+      <div class="address">
+        <ul>
+          <%= station.full_address %>
+        </ul>
+      </div>
     </div>
-    <h4>Address:</h4>
-    <div class="address">
-      <ul>
-        <%= station.full_address %>
-      </ul>
-    </div>
-  </div>
-<% end %>
+  <% end %>
+</div>

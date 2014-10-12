@@ -1,0 +1,26 @@
+.layout-fixed-width {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.home {
+  padding-top: 125px;
+}
+
+.content {
+  padding: 1em;
+}
+
+.address-search-form {
+  input[type="text"]{
+    width: calc(100% - 105px);
+    float: left;
+    height: 40px;
+  }
+  input[type="submit"]{
+    float: right;
+    width: 100px;
+    height: 40px;
+    margin-left: 5px;
+  }
+}
