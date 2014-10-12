@@ -24,6 +24,12 @@
     margin-left: 5px;
   }
 }
+
+.listings li {
+  padding-bottom: 50px;
+}
+
+
 .hero {
   $hero-background-top: darken($base-accent-color, 25);
   $hero-background-bottom: adjust-hue($hero-background-top, -70);

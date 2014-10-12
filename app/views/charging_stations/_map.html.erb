@@ -1,0 +1,57 @@
+    <style type="text/css">
+      html, body, #map-canvas { height: 300px; margin: 0; padding: 0; }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSM97LEyh3OM3GhejPbaZDWqTlGLpZ54I">
+    </script>
+
+
+<div id="map-canvas"></div>
+<p>
+  Address: <%= address %>
+</p>
+<script type="text/javascript">
+var geocoder, map;
+
+function geocode_n_map(address) {
+    geocoder = new google.maps.Geocoder();
+    geocoder.geocode({
+        'address': address
+    }, function(results, status) {
+      console.info("geocode success")
+        if (status == google.maps.GeocoderStatus.OK) {
+            var myOptions = {
+                zoom: 14,
+                center: results[0].geometry.location,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+            }
+            map = new google.maps.Map(document.getElementById("map-canvas"), myOptions);
+
+            var current_marker = new google.maps.Marker({
+                icon: 'http://maps.google.com/mapfiles/ms/icons/green-dot.png',
+                map: map,
+                position: results[0].geometry.location,
+                title: "Location you searched for"
+            });
+
+            $(".listings li").each(function(){
+              var marker = new google.maps.Marker({
+                  icon: 'http://maps.google.com/mapfiles/ms/icons/yellow-dot.png',
+                  map: map,
+                  position: new google.maps.LatLng($(this).data("lat"), $(this).data("lon")),
+                  title: $(this).data("name")
+              });
+
+            })
+
+
+        }else{
+          alert("Couldn't Find Map");
+        }
+    });
+}
+
+$( document ).ready(function(){
+  geocode_n_map("<%= address %>");
+});
+</script>
