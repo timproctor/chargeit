@@ -18,7 +18,6 @@ function geocode_n_map(address) {
     geocoder.geocode({
         'address': address
     }, function(results, status) {
-      console.info("geocode success")
         if (status == google.maps.GeocoderStatus.OK) {
             var myOptions = {
                 zoom: 14,
