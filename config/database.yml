@@ -6,7 +6,10 @@ default: &default
   timeout:  5000
 
 development:
-  <<: *default
+  adapter: postgresql
+  host: localhost
+  username: timproctor
+  database: app-dev
 
 test:
   <<: *default
