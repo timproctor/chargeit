@@ -21,6 +21,7 @@ gem "therubyracer"
 gem 'bourbon'
 gem 'neat'
 gem 'geocoder'
+gem 'omniauth'
 
 group :development do
   gem 'better_errors'
