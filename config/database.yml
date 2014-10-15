@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: myapp_development
+  database: chargeit_development
   host: localhost
   pool: 5
   username: deployment
@@ -10,7 +10,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: myapp_test
+  database: chargeit_test
   host: localhost
   pool: 5
   username: deployment
@@ -19,7 +19,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: myapp
+  database: chargeit
   host: localhost
   pool: 5
   username: deployment
