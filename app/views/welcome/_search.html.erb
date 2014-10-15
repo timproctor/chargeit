@@ -1,6 +1,16 @@
-<div class="search-tool">
-  <%= form_tag("/search", method: "post", class: "address-search-form") do %>
-    <%= text_field_tag(:q, nil, {id: 'address-search', placeholder: 'Charging stations near which address?'}) %>
-    <%= submit_tag("Search") %>
-  <% end %>
+<div class="layout-fixed-width ">
+  <div class="hero">
+    <div class="hero-inner">
+      <%= link_to image_tag('chargeit.png'), root_path, class: 'logo' %>
+      <div class="hero-copy">
+        
+        <div class="search-tool">
+          <%= form_tag("/search", method: "post", class: "address-search-form") do %>
+            <%= text_field_tag(:q, nil, {id: 'address-search', placeholder: 'Charging stations near which address?'}) %>
+            <%= submit_tag("Search") %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

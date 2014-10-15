@@ -6,7 +6,7 @@
         <hr/ ><%= render partial: "map", locals: {address: @address, charging_stations: @charging_stations} %><hr/ >
   			<h1>Charging Facilities Near Your Search</h1>
           <% if !@charging_stations.present? %>
-            <h4>DERP. We didn't find any.</h4>
+            <h4>Sorry. There are no stations, that we know of, near there.</h4>
           <% end %>
           <ul class="listings">
             <% @charging_stations.each do |station| %>
