@@ -7,9 +7,12 @@ default: &default
 
 development:
   adapter: postgresql
+  encoding: unicode
   host: localhost
-  username: timproctor
-  database: app-dev
+  username: deployment
+  database: myapp_development
+  pool: 5
+  password: passwod1
 
 test:
   <<: *default
