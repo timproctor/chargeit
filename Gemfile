@@ -22,6 +22,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'geocoder'
 gem 'omniauth-twitter'
+gem 'rails_12factor'
 
 group :development do
   gem 'better_errors'
