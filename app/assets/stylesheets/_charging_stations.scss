@@ -31,9 +31,9 @@
 
 
 .hero {
-  $hero-background-top: darken($base-accent-color, 25);
-  $hero-background-bottom: adjust-hue($hero-background-top, -70);
-  $hero-color: white;
+  $hero-background-top: darken(rgb(254,249,157), 25);
+  $hero-background-bottom: adjust-hue(rgb(255,238,0), -70);
+  $hero-color: yellow;
   $gradient-angle: 10deg;
   $hero-image: 'https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/mountains.png';
 

@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   get 'map',     to: 'charging_stations#map'
 
   match "/auth/twitter/callback", to: "sessions#create", via: [:get, :post]
-  match "/signout", to: "sessions#destroy", as: :signout, via: [:get, :post]
+  match "/signout", to: "sessions#destroy", via: [:get, :post]
 end

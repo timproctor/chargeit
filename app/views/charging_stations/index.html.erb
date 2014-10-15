@@ -1,13 +1,12 @@
 <div class="layout-fixed-width ">
   <div class="hero">
   	<div class="hero-inner">
-      <a href="" class="hero-logo"><img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1.png
-  " alt="Logo Image"></a>
+      <%= link_to image_tag('chargeit.png'), root_path, class: 'logo' %>
   		<div class="hero-copy">
         <hr/ ><%= render partial: "map", locals: {address: @address, charging_stations: @charging_stations} %><hr/ >
   			<h1>Charging Facilities Near Your Search</h1>
           <% if !@charging_stations.present? %>
-            <h4>DERP. We didn't find any.</h4>
+            <h4>Sorry. There are no stations, that we know of, near there.</h4>
           <% end %>
           <ul class="listings">
             <% @charging_stations.each do |station| %>
