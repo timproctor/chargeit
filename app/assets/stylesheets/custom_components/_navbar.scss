@@ -1,6 +1,6 @@
 header.navigation {
   $navigation-padding: 1em;
-  $navigation-background: $purplish-blue;
+  $navigation-background: $lazyellow;
   $navigation-color: transparentize(white, 0.3);
   $navigation-color-hover: white;
   $navigation-height: 60px;
@@ -15,7 +15,7 @@ header.navigation {
   $horizontal-bar-mode: $large-screen;
 
   background-color: $navigation-background;
-  border-bottom: 7px solid $blackish;
+  border-bottom: 7px solid $bolderyellow;
   height: $navigation-height;
   width: 100%;
   z-index: 999;
