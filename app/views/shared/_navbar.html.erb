@@ -8,18 +8,16 @@
     </div>
     <div class="navigation-tools">
       <div class="button-group">
-        <label>
-          <% if current_user %>
-            <div class="welcome">Welcome <%= current_user.name %></div>
-            <form action="/signout">
-              <input type="submit" value="Sign Out">
-            </form>
-          <% else %>
-            <form action="/auth/twitter">
-              <input type="submit" value="Sign in with Twitter" id="omni-login">
-            </form>
-          <% end %>
-        </label>
+        <% if current_user %>
+          <div class="welcome">Welcome <%= current_user.name %></div>
+          <form action="/signout">
+            <input type="submit" value="Sign Out">
+          </form>
+        <% else %>
+          <form action="/auth/twitter">
+            <input type="submit" value="Sign in with Twitter" id="omni-login">
+          </form>
+        <% end %>
       </div>
     </div>
   </div>

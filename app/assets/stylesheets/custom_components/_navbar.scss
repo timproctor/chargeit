@@ -91,7 +91,14 @@ header.navigation {
   // The nav items
 
   .welcome{
-    
+    float: left;
+    color: black;
+    margin-right: 10px;
+    margin-top: 10px;
+  }
+
+  .button-group form{
+    float: left;
   }
 
   ul li.nav-link {
