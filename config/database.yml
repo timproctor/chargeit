@@ -22,5 +22,5 @@ production:
   database: chargeit
   host: localhost
   pool: 5
-  username: timproctor
+  username: 
   password: password1
