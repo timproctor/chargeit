@@ -8,4 +8,4 @@ This app uses the Google API to map charging stations and to search an address t
 
 There is currently an authentication through Twitter, but there is no functionality to this feature except that it paves the way for future functionality at a later date and feature add-ons.
 
-### Enjoy our improving your carbon footprint!!!!
+### Enjoy improving your carbon footprint!!!!
