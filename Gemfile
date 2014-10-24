@@ -17,7 +17,6 @@ gem 'pry'
 gem 'postgres-copy'
 gem "autoprefixer-rails"
 gem "execjs"
-gem "therubyracer"
 gem 'bourbon'
 gem 'neat'
 gem 'geocoder'
