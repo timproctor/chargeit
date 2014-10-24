@@ -1,7 +1,7 @@
 <div class="layout-fixed-width ">
   <div class="hero">
   	<div class="hero-inner">
-      <%= link_to image_tag('chargeit.png'), root_path, class: 'logo' %>
+      <%= link_to image_tag('assets/chargeit.png'), root_path, class: 'logo' %>
   		<div class="hero-copy">
         <hr/ ><%= render partial: "map", locals: {address: @address, charging_stations: @charging_stations} %><hr/ >
   			<h1>Charging Facilities Near Your Search</h1>
